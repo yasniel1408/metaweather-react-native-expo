@@ -1,8 +1,9 @@
 const colors = {
-  primary: "blue",
+  primary: "#400aff",
+  secondary: "#f00aff",
   charade: "#f5f5f5",
   zircon: "#3a4049",
-  dark: "darkblue",
+  dark: "#090d27",
   carmine: "#ef6372",
   white: "#fff",
 };

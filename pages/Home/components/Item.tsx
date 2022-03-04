@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import IItem from "../../../types/IItem";
-import styles from "../styles";
+import styles from "./styles";
 
 const Item = ({
   navigation,
@@ -16,14 +16,12 @@ const Item = ({
         <Text style={styles?.title}>Name: {title}</Text>
         <Text style={styles?.abbreviation}>Abbreviation: {abbreviation}</Text>
       </View>
-      <View>
-        <Image
-          style={styles.stretch}
-          source={{
-            uri: `https://www.metaweather.com/static/img/weather/${abbreviation}.svg`,
-          }}
-        />
-      </View>
+      <Image
+        style={styles.stretch}
+        source={{
+          uri: `https://www.metaweather.com/static/img/weather/${abbreviation}.png`,
+        }}
+      />
     </View>
   </Pressable>
 );

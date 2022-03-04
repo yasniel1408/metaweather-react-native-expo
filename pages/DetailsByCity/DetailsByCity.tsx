@@ -17,7 +17,7 @@ const DetailsByCity = ({
         `https://www.metaweather.com/api/location/search/?query=${abbreviation}`
       );
       console.log(res);
-      setList(res);
+      setList(res.data);
     };
     load();
   }, []);
@@ -25,6 +25,7 @@ const DetailsByCity = ({
   return (
     <View>
       <Text>DetailsByCity</Text>
+      <Text>{JSON.stringify(list)}</Text>
     </View>
   );
 };
