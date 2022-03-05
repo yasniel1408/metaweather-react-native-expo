@@ -1,6 +1,5 @@
 import React from "react";
-import { Pressable, Text, View } from "react-native";
-import SvgUri from "react-native-svg-uri";
+import { Image, Pressable, Text, View } from "react-native";
 import IItem from "../../../types/IItem";
 import styles from "./styles";
 
@@ -9,8 +8,6 @@ const HorizontalItem = ({
   title,
   abbreviation,
 }: IItem & { navigation: any }) => {
-  const getImageUrl: string = "../../../assets/" + "t" + ".svg";
-
   return (
     <View style={styles?.horizontalItem}>
       <Pressable
@@ -20,7 +17,10 @@ const HorizontalItem = ({
           <Text style={styles?.title2}>Name: {title}</Text>
         </View>
         <View>
-          <SvgUri width="70" height="70" source={require(getImageUrl)} />
+          <Image
+            style={styles.stretch2}
+            source={require(`../../../assets/t.png`)}
+          />
         </View>
       </Pressable>
     </View>

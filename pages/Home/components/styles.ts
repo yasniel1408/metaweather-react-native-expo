@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  stretch2: {
+    width: 70,
+    height: 70,
+  },
 });
 
 export default styles;
