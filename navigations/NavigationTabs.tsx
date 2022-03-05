@@ -11,14 +11,7 @@ const Tabs = createBottomTabNavigator();
 
 const TabsNavigation = () => {
   return (
-    <Tabs.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: colors.dark,
-        },
-        headerTintColor: colors.white,
-      }}
-    >
+    <Tabs.Navigator>
       <Tabs.Screen name="MetaWeather" component={MainStacksNavigation} />
       <Tabs.Screen name="User" component={UserStacksNavigation} />
       <Tabs.Screen name="Settings" component={SettingsStacksNavigation} />

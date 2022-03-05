@@ -11,14 +11,7 @@ const Drawer = createDrawerNavigator();
 
 const NavigationDrawer = () => {
   return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: colors.dark,
-        },
-        headerTintColor: colors.white,
-      }}
-    >
+    <Drawer.Navigator>
       <Drawer.Screen name="MetaWeather" component={TabsNavigation} />
       <Drawer.Screen name="User" component={UserStacksNavigation} />
       <Drawer.Screen name="Settings" component={SettingsStacksNavigation} />

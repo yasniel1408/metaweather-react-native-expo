@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 3,
     marginHorizontal: 3,
-    width: 120,
+    width: 140,
     height: 120,
     borderRadius: 10,
     flex: 1,
@@ -38,8 +38,9 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   title2: {
-    fontSize: 8,
+    fontSize: 15,
     color: colors.white,
+    marginBottom: 5,
   },
   abbreviation2: {
     fontSize: 10,
