@@ -20,9 +20,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 17,
+    color: colors.white,
   },
   abbreviation: {
     fontSize: 13,
+    color: colors.white,
   },
   stretch: {
     width: 40,

@@ -1,6 +1,8 @@
 import React from "react";
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
+import SvgUri from "react-native-svg-uri";
 import IItem from "../../../types/IItem";
+import colors from "../../../utils/colors";
 import styles from "./styles";
 
 const Item = ({
@@ -16,12 +18,15 @@ const Item = ({
         <Text style={styles?.title}>Name: {title}</Text>
         <Text style={styles?.abbreviation}>Abbreviation: {abbreviation}</Text>
       </View>
-      <Image
-        style={styles.stretch}
-        source={{
-          uri: `https://www.metaweather.com/static/img/weather/${abbreviation}.png`,
-        }}
-      />
+      <View>
+        <SvgUri
+          width="40"
+          height="40"
+          source={{
+            uri: `https://www.metaweather.com/static/img/weather/${abbreviation}.svg`,
+          }}
+        />
+      </View>
     </View>
   </Pressable>
 );

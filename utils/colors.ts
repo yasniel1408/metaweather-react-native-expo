@@ -1,6 +1,6 @@
 const colors = {
-  primary: "#400aff",
-  secondary: "#f00aff",
+  primary: "#00BFFF",
+  secondary: "#090d40",
   charade: "#f5f5f5",
   zircon: "#3a4049",
   dark: "#090d27",
