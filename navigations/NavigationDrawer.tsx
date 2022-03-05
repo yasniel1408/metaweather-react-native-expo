@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import React from "react";
 import { Button } from "react-native";
 import LogoTitle from "../components/LogoTitle";
@@ -6,11 +6,11 @@ import Home from "../pages/Home/Home";
 import Settings from "../pages/Settings/Settings";
 import colors from "../utils/colors";
 
-const Tabs = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
-const NavigationTabs = () => {
+const NavigationDrawer = () => {
   return (
-    <Tabs.Navigator
+    <Drawer.Navigator
       screenOptions={{
         headerStyle: {
           backgroundColor: colors.dark,
@@ -18,7 +18,7 @@ const NavigationTabs = () => {
         headerTintColor: colors.white,
       }}
     >
-      <Tabs.Screen
+      <Drawer.Screen
         name="MetaWeather"
         component={Home}
         options={{
@@ -28,9 +28,9 @@ const NavigationTabs = () => {
           ),
         }}
       />
-      <Tabs.Screen name="Settings" component={Settings} />
-    </Tabs.Navigator>
+      <Drawer.Screen name="Settings" component={Settings} />
+    </Drawer.Navigator>
   );
 };
 
-export default NavigationTabs;
+export default NavigationDrawer;
