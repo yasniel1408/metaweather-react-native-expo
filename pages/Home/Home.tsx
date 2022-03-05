@@ -10,7 +10,7 @@ import { weatherStates } from "./constants";
 const Home = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView>
-      <View style={{ height: 500 }}>
+      <View style={{ height: 450 }}>
         <FlatList
           data={weatherStates}
           renderItem={({ item }: { item: IItem }) => (

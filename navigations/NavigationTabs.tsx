@@ -12,14 +12,14 @@ const Tab = createBottomTabNavigator();
 
 const TabsNavigation = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         options={({ route }) => ({
           tabBarIcon: ({ focused, color, size }: any) => {
             return <Ionicons name="home" size={size} color={color} />;
           },
         })}
-        name="MetaWeather"
+        name="MetaWeatherTab"
         component={MainStacksNavigation}
       />
       <Tab.Screen
@@ -28,7 +28,7 @@ const TabsNavigation = () => {
             return <Ionicons name="people" size={size} color={color} />;
           },
         })}
-        name="User"
+        name="UserTab"
         component={UserStacksNavigation}
       />
       <Tab.Screen
@@ -37,7 +37,7 @@ const TabsNavigation = () => {
             return <Ionicons name="list" size={size} color={color} />;
           },
         })}
-        name="Settings"
+        name="SettingsTab"
         component={SettingsStacksNavigation}
       />
     </Tab.Navigator>

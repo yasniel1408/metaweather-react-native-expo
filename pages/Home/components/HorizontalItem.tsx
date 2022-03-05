@@ -19,7 +19,10 @@ const HorizontalItem = ({
         <View>
           <Image
             style={styles.stretch2}
-            source={require(`../../../assets/t.png`)}
+            // source={require(`../../../assets/${abbreviation}.png`)}
+            source={{
+              uri: `https://dd7tel2830j4w.cloudfront.net/f1532620903696x278477401239797470/if_Weather_669958.svg`,
+            }}
           />
         </View>
       </Pressable>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../Home/components/styles";
 import { SafeAreaView } from "react-native-safe-area-context";
+import colors from "../../utils/colors";
 
 const DetailsByCity = ({
   route: {
@@ -28,9 +29,9 @@ const DetailsByCity = ({
   }, []);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1, justifyContent: "center" }}>
       {loading ? (
-        <ActivityIndicator size="large" />
+        <ActivityIndicator color={colors.primary} size="large" />
       ) : (
         <View style={styles.container}>
           <Text>DetailsByCity</Text>
