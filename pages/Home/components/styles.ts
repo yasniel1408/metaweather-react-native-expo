@@ -18,6 +18,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  horizontalItem: {
+    backgroundColor: colors.primary,
+    padding: 20,
+    marginVertical: 3,
+    marginHorizontal: 3,
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
   title: {
     fontSize: 17,
     color: colors.white,
