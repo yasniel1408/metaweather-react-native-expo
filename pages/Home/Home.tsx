@@ -1,6 +1,7 @@
 import React from "react";
-import { FlatList, SafeAreaView, Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 import IItem from "../../types/IItem";
 import HorizontalItem from "./components/HorizontalItem";
 import Item from "./components/Item";
@@ -8,7 +9,7 @@ import { weatherStates } from "./constants";
 
 const Home = ({ navigation }: { navigation: any }) => {
   return (
-    <View>
+    <SafeAreaView>
       <View style={{ height: 500 }}>
         <FlatList
           data={weatherStates}
@@ -28,7 +29,7 @@ const Home = ({ navigation }: { navigation: any }) => {
           horizontal={true}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import colors from "../utils/colors";
@@ -7,15 +8,39 @@ import {
   UserStacksNavigation,
 } from "./NavigationStacks";
 
-const Tabs = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 const TabsNavigation = () => {
   return (
-    <Tabs.Navigator>
-      <Tabs.Screen name="MetaWeather" component={MainStacksNavigation} />
-      <Tabs.Screen name="User" component={UserStacksNavigation} />
-      <Tabs.Screen name="Settings" component={SettingsStacksNavigation} />
-    </Tabs.Navigator>
+    <Tab.Navigator>
+      <Tab.Screen
+        options={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }: any) => {
+            return <Ionicons name="home" size={size} color={color} />;
+          },
+        })}
+        name="MetaWeather"
+        component={MainStacksNavigation}
+      />
+      <Tab.Screen
+        options={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }: any) => {
+            return <Ionicons name="people" size={size} color={color} />;
+          },
+        })}
+        name="User"
+        component={UserStacksNavigation}
+      />
+      <Tab.Screen
+        options={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }: any) => {
+            return <Ionicons name="list" size={size} color={color} />;
+          },
+        })}
+        name="Settings"
+        component={SettingsStacksNavigation}
+      />
+    </Tab.Navigator>
   );
 };
 

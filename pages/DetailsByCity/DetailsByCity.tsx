@@ -1,7 +1,8 @@
-import { ActivityIndicator, SafeAreaView, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../Home/components/styles";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const DetailsByCity = ({
   route: {

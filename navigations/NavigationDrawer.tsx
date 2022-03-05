@@ -11,7 +11,7 @@ const Drawer = createDrawerNavigator();
 
 const NavigationDrawer = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator initialRouteName="MetaWeather">
       <Drawer.Screen name="MetaWeather" component={TabsNavigation} />
       <Drawer.Screen name="User" component={UserStacksNavigation} />
       <Drawer.Screen name="Settings" component={SettingsStacksNavigation} />

@@ -8,7 +8,9 @@ import Settings from "../pages/Settings/Settings";
 import User from "../pages/User/User";
 import colors from "../utils/colors";
 
-const Stack = createNativeStackNavigator();
+const MainStack = createNativeStackNavigator();
+const SettingsStack = createNativeStackNavigator();
+const UserStack = createNativeStackNavigator();
 
 const screenOptionStyle = {
   headerStyle: {
@@ -19,8 +21,8 @@ const screenOptionStyle = {
 
 const MainStacksNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen
+    <MainStack.Navigator screenOptions={screenOptionStyle}>
+      <MainStack.Screen
         name="MetaWeather"
         component={Home}
         options={{
@@ -30,24 +32,24 @@ const MainStacksNavigation = () => {
           ),
         }}
       />
-      <Stack.Screen name="DetailsByCity" component={DetailsByCity} />
-    </Stack.Navigator>
+      <MainStack.Screen name="DetailsByCity" component={DetailsByCity} />
+    </MainStack.Navigator>
   );
 };
 
 const SettingsStacksNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Settings" component={Settings} />
-    </Stack.Navigator>
+    <SettingsStack.Navigator screenOptions={screenOptionStyle}>
+      <SettingsStack.Screen name="Settings" component={Settings} />
+    </SettingsStack.Navigator>
   );
 };
 
 const UserStacksNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="User" component={User} />
-    </Stack.Navigator>
+    <UserStack.Navigator screenOptions={screenOptionStyle}>
+      <UserStack.Screen name="User" component={User} />
+    </UserStack.Navigator>
   );
 };
 
