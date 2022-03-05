@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: colors.primary,
-    padding: 20,
+    padding: 15,
     marginVertical: 3,
     marginHorizontal: 3,
     width: "97%",
@@ -19,16 +19,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   horizontalItem: {
-    backgroundColor: colors.primary,
-    padding: 20,
+    backgroundColor: colors.carmine,
+    padding: 10,
     marginVertical: 3,
     marginHorizontal: 3,
-    width: 80,
-    height: 80,
+    width: 120,
+    height: 120,
     borderRadius: 10,
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: "column",
   },
   title: {
     fontSize: 17,
@@ -36,6 +35,14 @@ const styles = StyleSheet.create({
   },
   abbreviation: {
     fontSize: 13,
+    color: colors.white,
+  },
+  title2: {
+    fontSize: 8,
+    color: colors.white,
+  },
+  abbreviation2: {
+    fontSize: 10,
     color: colors.white,
   },
   stretch: {

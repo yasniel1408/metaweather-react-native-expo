@@ -6,13 +6,13 @@ import SvgUri from "react-native-svg-uri";
 const LogoTitle = () => {
   return (
     <View style={styles.container}>
-      <SvgUri
+      {/* <SvgUri
         width="40"
         height="40"
         source={{
           uri: `https://dd7tel2830j4w.cloudfront.net/f1532620903696x278477401239797470/if_Weather_669958.svg`,
         }}
-      />
+      /> */}
       <Text style={styles.title}>Meta Weather</Text>
     </View>
   );
@@ -23,7 +23,7 @@ export default LogoTitle;
 const styles = StyleSheet.create({
   title: {
     color: colors.white,
-    fontSize: 34,
+    fontSize: 30,
     fontWeight: "bold",
     marginLeft: 10,
   },

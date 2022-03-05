@@ -1,14 +1,15 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
-import { Button } from "react-native";
-import LogoTitle from "../components/LogoTitle";
-import Home from "../pages/Home/Home";
-import Settings from "../pages/Settings/Settings";
 import colors from "../utils/colors";
+import {
+  MainStacksNavigation,
+  SettingsStacksNavigation,
+  UserStacksNavigation,
+} from "./NavigationStacks";
 
 const Tabs = createBottomTabNavigator();
 
-const NavigationTabs = () => {
+const TabsNavigation = () => {
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -18,19 +19,11 @@ const NavigationTabs = () => {
         headerTintColor: colors.white,
       }}
     >
-      <Tabs.Screen
-        name="MetaWeather"
-        component={Home}
-        options={{
-          headerTitle: (props: any) => <LogoTitle {...props} />,
-          headerRight: () => (
-            <Button onPress={() => alert("This is a button!")} title="Info" />
-          ),
-        }}
-      />
-      <Tabs.Screen name="Settings" component={Settings} />
+      <Tabs.Screen name="MetaWeather" component={MainStacksNavigation} />
+      <Tabs.Screen name="User" component={UserStacksNavigation} />
+      <Tabs.Screen name="Settings" component={SettingsStacksNavigation} />
     </Tabs.Navigator>
   );
 };
 
-export default NavigationTabs;
+export default TabsNavigation;

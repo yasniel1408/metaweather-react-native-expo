@@ -10,25 +10,25 @@ const Item = ({
   title,
   abbreviation,
 }: IItem & { navigation: any }) => (
-  <Pressable
-    onPress={() => navigation.navigate("DetailsByCity", { abbreviation })}
-  >
-    <View style={styles?.item}>
+  <View style={styles?.item}>
+    <Pressable
+      onPress={() => navigation.navigate("DetailsByCity", { abbreviation })}
+    >
       <View>
         <Text style={styles?.title}>Name: {title}</Text>
         <Text style={styles?.abbreviation}>Abbreviation: {abbreviation}</Text>
       </View>
       <View>
-        <SvgUri
+        {/* <SvgUri
           width="40"
           height="40"
           source={{
             uri: `https://www.metaweather.com/static/img/weather/${abbreviation}.svg`,
           }}
-        />
+        /> */}
       </View>
-    </View>
-  </Pressable>
+    </Pressable>
+  </View>
 );
 
 export default Item;

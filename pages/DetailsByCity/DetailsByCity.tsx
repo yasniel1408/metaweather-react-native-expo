@@ -1,4 +1,4 @@
-import { ActivityIndicator, Text, View } from "react-native";
+import { ActivityIndicator, SafeAreaView, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "../Home/components/styles";
@@ -27,7 +27,7 @@ const DetailsByCity = ({
   }, []);
 
   return (
-    <View>
+    <SafeAreaView>
       {loading ? (
         <ActivityIndicator size="large" />
       ) : (
@@ -36,7 +36,7 @@ const DetailsByCity = ({
           <Text>{JSON.stringify(list)}</Text>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 

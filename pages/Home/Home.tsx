@@ -1,11 +1,11 @@
 import React from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, SafeAreaView, Text, View } from "react-native";
 import IItem from "../../types/IItem";
 import HorizontalItem from "./components/HorizontalItem";
 import Item from "./components/Item";
 import { weatherStates } from "./constants";
 
-export default function Home({ navigation }: { navigation: any }) {
+const Home = ({ navigation }: { navigation: any }) => {
   return (
     <View>
       <FlatList
@@ -25,4 +25,6 @@ export default function Home({ navigation }: { navigation: any }) {
       />
     </View>
   );
-}
+};
+
+export default Home;
